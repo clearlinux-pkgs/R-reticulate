@@ -1,1 +1,6 @@
 # This file contains recursive sources that require this package
+R-NMF
+R-argparse
+R-doRNG
+R-pkgmaker
+R-rngtools
