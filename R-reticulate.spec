@@ -4,7 +4,7 @@
 #
 Name     : R-reticulate
 Version  : 1.10
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/reticulate_1.10.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reticulate_1.10.tar.gz
 Summary  : Interface to 'Python'
