@@ -2,3 +2,5 @@
 R-Rcpp
 R-callr
 R-jsonlite
+R-markdown
+R-mime

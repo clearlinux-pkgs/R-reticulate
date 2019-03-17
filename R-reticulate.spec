@@ -4,19 +4,20 @@
 #
 Name     : R-reticulate
 Version  : 1.11.1
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/reticulate_1.11.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reticulate_1.11.1.tar.gz
 Summary  : Interface to 'Python'
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: R-reticulate-lib = %{version}-%{release}
-Requires: R-Rcpp
-Requires: R-callr
-Requires: R-jsonlite
+Requires: R-markdown
+Requires: R-mime
 BuildRequires : R-Rcpp
 BuildRequires : R-callr
 BuildRequires : R-jsonlite
+BuildRequires : R-markdown
+BuildRequires : R-mime
 BuildRequires : buildreq-R
 
 %description
@@ -40,10 +41,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551929608
+export SOURCE_DATE_EPOCH=1552844969
 
 %install
-export SOURCE_DATE_EPOCH=1551929608
+export SOURCE_DATE_EPOCH=1552844969
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -79,8 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library reticulate|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  reticulate || :
 
 
 %files
@@ -126,7 +126,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/reticulate/help/reticulate.rdx
 /usr/lib64/R/library/reticulate/html/00Index.html
 /usr/lib64/R/library/reticulate/html/R.css
-/usr/lib64/R/library/reticulate/libs/symbols.rds
 /usr/lib64/R/library/reticulate/python/rpytools/__init__.py
 /usr/lib64/R/library/reticulate/python/rpytools/__init__.pyc
 /usr/lib64/R/library/reticulate/python/rpytools/call.py
@@ -141,6 +140,39 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/reticulate/python/rpytools/test.pyc
 /usr/lib64/R/library/reticulate/python/rpytools/thread.py
 /usr/lib64/R/library/reticulate/python/rpytools/thread.pyc
+/usr/lib64/R/library/reticulate/tests/testthat.R
+/usr/lib64/R/library/reticulate/tests/testthat/helper-utils.R
+/usr/lib64/R/library/reticulate/tests/testthat/resources/eng-reticulate-example.Rmd
+/usr/lib64/R/library/reticulate/tests/testthat/resources/eng-reticulate-example.html
+/usr/lib64/R/library/reticulate/tests/testthat/resources/venv-activate.R
+/usr/lib64/R/library/reticulate/tests/testthat/script.py
+/usr/lib64/R/library/reticulate/tests/testthat/test-delay-load.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-examples.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-help-handlers.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-py_func.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-arrays.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-classes.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-closures.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-comparisons.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-complex.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-datetime.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-dict.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-envs.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-factors.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-function.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-iterators.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-knitr-engine.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-lists.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-numpy.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-output.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-pandas.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-pickle.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-raw.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-scipy-sparse-matrix.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-source.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-strings.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-vectors.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-python-virtual-environments.R
 
 %files lib
 %defattr(-,root,root,-)
