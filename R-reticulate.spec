@@ -4,15 +4,13 @@
 #
 Name     : R-reticulate
 Version  : 1.11.1
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/reticulate_1.11.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reticulate_1.11.1.tar.gz
 Summary  : Interface to 'Python'
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: R-reticulate-lib = %{version}-%{release}
-Requires: R-markdown
-Requires: R-mime
 BuildRequires : R-Rcpp
 BuildRequires : R-callr
 BuildRequires : R-jsonlite
@@ -41,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552844969
+export SOURCE_DATE_EPOCH=1552867879
 
 %install
-export SOURCE_DATE_EPOCH=1552844969
+export SOURCE_DATE_EPOCH=1552867879
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
