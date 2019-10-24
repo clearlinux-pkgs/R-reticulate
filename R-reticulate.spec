@@ -4,7 +4,7 @@
 #
 Name     : R-reticulate
 Version  : 1.13
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/reticulate_1.13.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reticulate_1.13.tar.gz
 Summary  : Interface to 'Python'
@@ -12,12 +12,14 @@ Group    : Development/Tools
 License  : Apache-2.0
 Requires: R-reticulate-lib = %{version}-%{release}
 Requires: R-Rcpp
-Requires: R-callr
 Requires: R-jsonlite
 BuildRequires : R-Rcpp
 BuildRequires : R-callr
 BuildRequires : R-jsonlite
+BuildRequires : R-markdown
+BuildRequires : R-mime
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 into 'Python', R data types are automatically converted to their equivalent 'Python'
@@ -40,10 +42,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564028812
+export SOURCE_DATE_EPOCH=1571889290
 
 %install
-export SOURCE_DATE_EPOCH=1564028812
+export SOURCE_DATE_EPOCH=1571889290
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
