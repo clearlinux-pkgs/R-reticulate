@@ -1,5 +1,5 @@
 PKG_NAME := R-reticulate
-URL = https://cran.r-project.org/src/contrib/reticulate_1.17.tar.gz
+URL = https://cran.r-project.org/src/contrib/reticulate_1.18.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
