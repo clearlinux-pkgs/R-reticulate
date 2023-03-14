@@ -4,7 +4,7 @@
 #
 Name     : R-reticulate
 Version  : 1.28
-Release  : 67
+Release  : 68
 URL      : https://cran.r-project.org/src/contrib/reticulate_1.28.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reticulate_1.28.tar.gz
 Summary  : Interface to 'Python'
@@ -26,9 +26,6 @@ BuildRequires : R-png
 BuildRequires : R-rappdirs
 BuildRequires : R-withr
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 into 'Python', R data types are automatically converted to their equivalent 'Python'
@@ -52,10 +49,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1674946033
+export SOURCE_DATE_EPOCH=1678837293
 
 %install
-export SOURCE_DATE_EPOCH=1674946033
+export SOURCE_DATE_EPOCH=1678837293
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
