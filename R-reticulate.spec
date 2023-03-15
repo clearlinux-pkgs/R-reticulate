@@ -4,7 +4,7 @@
 #
 Name     : R-reticulate
 Version  : 1.28
-Release  : 68
+Release  : 69
 URL      : https://cran.r-project.org/src/contrib/reticulate_1.28.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reticulate_1.28.tar.gz
 Summary  : Interface to 'Python'
