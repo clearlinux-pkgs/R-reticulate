@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-reticulate
-Version  : 1.29
-Release  : 71
-URL      : https://cran.r-project.org/src/contrib/reticulate_1.29.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/reticulate_1.29.tar.gz
+Version  : 1.30
+Release  : 72
+URL      : https://cran.r-project.org/src/contrib/reticulate_1.30.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/reticulate_1.30.tar.gz
 Summary  : Interface to 'Python'
 Group    : Development/Tools
 License  : Apache-2.0
@@ -54,10 +54,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686066082
+export SOURCE_DATE_EPOCH=1686588464
 
 %install
-export SOURCE_DATE_EPOCH=1686066082
+export SOURCE_DATE_EPOCH=1686588464
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
