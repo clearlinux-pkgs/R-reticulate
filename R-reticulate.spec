@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-reticulate
-Version  : 1.30
-Release  : 73
-URL      : https://cran.r-project.org/src/contrib/reticulate_1.30.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/reticulate_1.30.tar.gz
+Version  : 1.31
+Release  : 74
+URL      : https://cran.r-project.org/src/contrib/reticulate_1.31.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/reticulate_1.31.tar.gz
 Summary  : Interface to 'Python'
 Group    : Development/Tools
 License  : Apache-2.0
@@ -54,10 +54,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686588464
+export SOURCE_DATE_EPOCH=1691718071
 
 %install
-export SOURCE_DATE_EPOCH=1686588464
+export SOURCE_DATE_EPOCH=1691718071
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -124,7 +124,6 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/reticulate/doc/package.R
 /usr/lib64/R/library/reticulate/doc/package.Rmd
 /usr/lib64/R/library/reticulate/doc/package.html
-/usr/lib64/R/library/reticulate/doc/python_dependencies.R
 /usr/lib64/R/library/reticulate/doc/python_dependencies.Rmd
 /usr/lib64/R/library/reticulate/doc/python_dependencies.html
 /usr/lib64/R/library/reticulate/doc/python_packages.R
@@ -162,11 +161,16 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/reticulate/python/rpytools/test.py
 /usr/lib64/R/library/reticulate/python/rpytools/thread.py
 /usr/lib64/R/library/reticulate/tests/testthat.R
+/usr/lib64/R/library/reticulate/tests/testthat/_snaps/python-knitr-engine/knitr-print.md
+/usr/lib64/R/library/reticulate/tests/testthat/_snaps/python-knitr-engine/knitr-print2.md
 /usr/lib64/R/library/reticulate/tests/testthat/_snaps/python-knitr-engine/knitr-warn.md
 /usr/lib64/R/library/reticulate/tests/testthat/_snaps/python-knitr-engine/test-chunking.md
 /usr/lib64/R/library/reticulate/tests/testthat/resources/altair-example.Rmd
 /usr/lib64/R/library/reticulate/tests/testthat/resources/eng-reticulate-example.Rmd
 /usr/lib64/R/library/reticulate/tests/testthat/resources/import-test.R
+/usr/lib64/R/library/reticulate/tests/testthat/resources/knitr-print.Rmd
+/usr/lib64/R/library/reticulate/tests/testthat/resources/knitr-print.md
+/usr/lib64/R/library/reticulate/tests/testthat/resources/knitr-print2.md
 /usr/lib64/R/library/reticulate/tests/testthat/resources/knitr-warn.Rmd
 /usr/lib64/R/library/reticulate/tests/testthat/resources/knitr-warn.md
 /usr/lib64/R/library/reticulate/tests/testthat/resources/matplotlib-example.Rmd
