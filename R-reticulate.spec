@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-reticulate
-Version  : 1.31
-Release  : 74
-URL      : https://cran.r-project.org/src/contrib/reticulate_1.31.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/reticulate_1.31.tar.gz
+Version  : 1.32.0
+Release  : 75
+URL      : https://cran.r-project.org/src/contrib/reticulate_1.32.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/reticulate_1.32.0.tar.gz
 Summary  : Interface to 'Python'
 Group    : Development/Tools
 License  : Apache-2.0
@@ -54,10 +54,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691718071
+export SOURCE_DATE_EPOCH=1694535060
 
 %install
-export SOURCE_DATE_EPOCH=1691718071
+export SOURCE_DATE_EPOCH=1694535060
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -158,6 +158,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/reticulate/python/rpytools/loader.py
 /usr/lib64/R/library/reticulate/python/rpytools/output.py
 /usr/lib64/R/library/reticulate/python/rpytools/signals.py
+/usr/lib64/R/library/reticulate/python/rpytools/subprocess.py
 /usr/lib64/R/library/reticulate/python/rpytools/test.py
 /usr/lib64/R/library/reticulate/python/rpytools/thread.py
 /usr/lib64/R/library/reticulate/tests/testthat.R
@@ -188,6 +189,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/reticulate/tests/testthat/test-examples.R
 /usr/lib64/R/library/reticulate/tests/testthat/test-help-handlers.R
 /usr/lib64/R/library/reticulate/tests/testthat/test-interrupts.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-multiprocessing.R
 /usr/lib64/R/library/reticulate/tests/testthat/test-py_func.R
 /usr/lib64/R/library/reticulate/tests/testthat/test-python-arrays.R
 /usr/lib64/R/library/reticulate/tests/testthat/test-python-base-r-generics.R
@@ -226,6 +228,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/reticulate/tests/testthat/test-python-vectors.R
 /usr/lib64/R/library/reticulate/tests/testthat/test-python-virtual-environments.R
 /usr/lib64/R/library/reticulate/tests/testthat/test-repl-magics.R
+/usr/lib64/R/library/reticulate/tests/testthat/test-subprocess.R
 
 %files lib
 %defattr(-,root,root,-)
