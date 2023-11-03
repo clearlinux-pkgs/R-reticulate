@@ -5,7 +5,7 @@
 #
 Name     : R-reticulate
 Version  : 1.34.0
-Release  : 76
+Release  : 77
 URL      : https://cran.r-project.org/src/contrib/reticulate_1.34.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reticulate_1.34.0.tar.gz
 Summary  : Interface to 'Python'
