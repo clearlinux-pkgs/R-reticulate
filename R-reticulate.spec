@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : R-reticulate
-Version  : 1.36.1
-Release  : 81
-URL      : https://cran.r-project.org/src/contrib/reticulate_1.36.1.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/reticulate_1.36.1.tar.gz
+Version  : 1.37.0
+Release  : 82
+URL      : https://cran.r-project.org/src/contrib/reticulate_1.37.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/reticulate_1.37.0.tar.gz
 Summary  : Interface to 'Python'
 Group    : Development/Tools
 License  : Apache-2.0
@@ -59,10 +59,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1713888477
+export SOURCE_DATE_EPOCH=1716401710
 
 %install
-export SOURCE_DATE_EPOCH=1713888477
+export SOURCE_DATE_EPOCH=1716401710
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -162,7 +162,6 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/reticulate/python/rpytools/ipython.py
 /usr/lib64/R/library/reticulate/python/rpytools/loader.py
 /usr/lib64/R/library/reticulate/python/rpytools/output.py
-/usr/lib64/R/library/reticulate/python/rpytools/signals.py
 /usr/lib64/R/library/reticulate/python/rpytools/subprocess.py
 /usr/lib64/R/library/reticulate/python/rpytools/test.py
 /usr/lib64/R/library/reticulate/python/rpytools/thread.py
