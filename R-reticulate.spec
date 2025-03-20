@@ -6,10 +6,10 @@
 # autospec commit: fbbd4e3
 #
 Name     : R-reticulate
-Version  : 1.41.0
-Release  : 87
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/reticulate_1.41.0.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/reticulate_1.41.0.tar.gz
+Version  : 1.41.0.1
+Release  : 88
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/reticulate_1.41.0.1.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/reticulate_1.41.0.1.tar.gz
 Summary  : Interface to 'Python'
 Group    : Development/Tools
 License  : Apache-2.0
@@ -59,10 +59,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1740438724
+export SOURCE_DATE_EPOCH=1742478669
 
 %install
-export SOURCE_DATE_EPOCH=1740438724
+export SOURCE_DATE_EPOCH=1742478669
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
